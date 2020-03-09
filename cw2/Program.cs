@@ -37,7 +37,17 @@ namespace Cw2
 
             var today = DateTime.UtcNow;
 
-            //var hash = new HashSet<Student>(new OwnCompare)
+
+            var hash = new HashSet<cw2.Student>(new cw2.OwnComparer());
+
+          //  public int getHashCode(Student Obj)
+          // {
+          //      return StringComparer
+          // }
+
+            //hash.Add();
+
+            //if(!hash.Add(Student))
 
 
         }

@@ -6,15 +6,15 @@ namespace cw2
 {
     class Student
     {
-        public string name {get; set; }
-        public string surname { get; set; }
-        public string studies { get; set; }
-        public string course { get; set; }
-        public string id { get; set; }
-        public string date { get; set; }
-        public string email { get; set; }
-        public string mother { get; set; }
-        public string father { get; set; }
+        public string Name {get; set; }
+        public string Surname { get; set; }
+        public string Studies { get; set; }
+        public string Course { get; set; }
+        public string Id { get; set; }
+        public string Date { get; set; }
+        public string Email { get; set; }
+        public string Mother { get; set; }
+        public string Father { get; set; }
       
     }
 }
