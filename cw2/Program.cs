@@ -19,13 +19,17 @@ namespace Cw2
         
             
              var liness = File.ReadLines(path);
+             var hash = new HashSet<cw2.Student>(new cw2.OwnComparer());
+             ICollection<string> list = new List<string>();
 
-            foreach (var line in liness)
+                foreach (var line in liness)
             {
+                    cw2.Student student = new cw2.Student();
+                    Console.WriteLine(line);
 
+                }
 
-                Console.WriteLine(line);
-            }
+               
 
             }
             catch (ArgumentException e)
@@ -33,12 +37,12 @@ namespace Cw2
                 Console.WriteLine("{0}: ", e.GetType().Name, e.Message);
             }
 
-            //ICollection<string> list = new List<string>;
+           
 
             var today = DateTime.UtcNow;
 
 
-            var hash = new HashSet<cw2.Student>(new cw2.OwnComparer());
+          
 
           //  public int getHashCode(Student Obj)
           // {
@@ -55,7 +59,4 @@ namespace Cw2
 
 
 
-}
-
-
-//.Newtonsoft.JSON   JSonConvert.SerializableObject
+}    //.Newtonsoft.JSON   JSonConvert.SerializableObject
