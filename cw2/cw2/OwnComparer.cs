@@ -8,7 +8,6 @@ namespace cw2
     {
         public bool Equals(Student x, Student y)
         {
-
             return StringComparer
             .InvariantCultureIgnoreCase
             .Equals($"{x.Name} {x.Surname} {x.Id}",

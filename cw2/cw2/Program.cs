@@ -37,21 +37,24 @@ namespace cw2
                     {
                         Name = splitLine[0],
                         Surname = splitLine[1],
-                        Studies = splitLine[2],
-                        Course = splitLine[3],
-                        Id = splitLine[4],
+                        Id = "s" + splitLine[4],
                         Date = splitLine[5],
                         Email = splitLine[6],
                         Mother = splitLine[7],
                         Father = splitLine[8],
+                        Studies = new Studia
+                        {
+                            Name = splitLine[3],
+                            Mode = splitLine[4]
+                        }
                     };
                     hash.Add(student);
                 }
 
 
 
-                XmlRootAttribute xmlRA = new XmlRootAttribute(@"Created at " + DateTime.Now + new XmlRootAttribute("Author: Michał Żabicki"));
-                XmlSerializer xmls = new XmlSerializer(typeof(HashSet<cw2.Student>), xmlRA);
+               
+                XmlSerializer xmls = new XmlSerializer(typeof(HashSet<cw2.Student>));
                 FileStream fsWrite = new FileStream(destinationPath, FileMode.Create);
                 xmls.Serialize(fsWrite, hash);
 

@@ -29,13 +29,8 @@ namespace cw2
         [XmlElement(elementName: "fathersName")]
         public string Father { get; set; }
 
-        //[XmlAttribute(AttributeName = "studies")]
-        
-        [XmlElement(elementName: "name")]
-        public string Studies { get; set; }
-
-        [XmlElement(elementName: "mode")]
-        public string Course { get; set; }
+        [XmlElement(elementName: "studies")]
+        public Studia Studies { get; set; }
 
 
     }
