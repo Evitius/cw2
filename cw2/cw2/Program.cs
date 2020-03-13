@@ -10,8 +10,8 @@ namespace Cw2
         {
 
 
-            var path = @"C:\Users\s18803\Desktop\dane.csv";
-            //var destinationPath = @"C:\Users\s18803\Desktop\wynik.xml";
+            var path = @"C:\Users\Michał\Desktop\dane.csv";
+            //var destinationPath = @"C:\Users\Michał\Desktop\wynik.xml";
 
             try
             {

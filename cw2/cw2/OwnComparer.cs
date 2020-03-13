@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace cw2
 {
@@ -17,9 +16,11 @@ namespace cw2
             throw new NotImplementedException();
         }
 
-        public int GetHashCode(Student obj)
+        public int GetHashCode(Student s)
         {
-            throw new NotImplementedException();
+            return StringComparer
+                .OrdinalIgnoreCase
+                .GetHashCode($"{s.Surname} {s.Name} {s.Id}");
         }
     }
 }
