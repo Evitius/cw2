@@ -11,7 +11,6 @@ namespace Cw2
 
           
             var path = @"C:\Users\s18803\Desktop\dane.csv";
-
             var destinationPath = @"C:\Users\s18803\Desktop\wynik.xml";
 
             try
@@ -21,13 +20,24 @@ namespace Cw2
              var liness = File.ReadLines(path);
              var hash = new HashSet<cw2.Student>(new cw2.OwnComparer());
              ICollection<string> list = new List<string>();
+             StreamWriter logs = File.CreateText("log.txt")
 
-                foreach (var line in liness)
-            {
-                    cw2.Student student = new cw2.Student();
-                    Console.WriteLine(line);
-
+             foreach (var line in liness)
+             {
+                 
+               var splitLine = line.Split(",");
+                
+                if(splitLine.Length < 9)
+                {
+                   logs.WriteLine(line);
+                   break;
                 }
+                  
+                 cw2.Student student = new cw2.Student(splitLine);
+                 Console.WriteLine(line);
+                 hash.Add(student);
+
+             }
 
                
 
@@ -39,22 +49,7 @@ namespace Cw2
 
            
 
-            var today = DateTime.UtcNow;
-
-
-          
-
-          //  public int getHashCode(Student Obj)
-          // {
-          //      return StringComparer
-          // }
-
-            //hash.Add();
-
-            //if(!hash.Add(Student))
-
-
-        }
+         }
     }
 
 
