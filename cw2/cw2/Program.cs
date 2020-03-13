@@ -52,11 +52,18 @@ namespace cw2
                 }
 
 
+                Uczelnia uczelnia = new Uczelnia
+                {
+                    CreatedAt = DateTime.Today,
+                    Author = "Michał Żabicki",
+                    Studenci = hash
+                };
+
 
                
-                XmlSerializer xmls = new XmlSerializer(typeof(HashSet<cw2.Student>));
+                XmlSerializer xmls = new XmlSerializer(typeof(Uczelnia));
                 FileStream fsWrite = new FileStream(destinationPath, FileMode.Create);
-                xmls.Serialize(fsWrite, hash);
+                xmls.Serialize(fsWrite,uczelnia);
 
 
             }
