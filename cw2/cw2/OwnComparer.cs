@@ -10,11 +10,11 @@ namespace cw2
         public bool Equals(Student x, Student y)
         {
 
-         return StringComparer
-         .InvariantCultureIgnoreCase
-         .Equals($"{x.Name} {x.Surname} {x.Id}", 
-         $"{y.Name} {y.Surname} {y.Id}");
-         throw new NotImplementedException();
+            return StringComparer
+            .InvariantCultureIgnoreCase
+            .Equals($"{x.Name} {x.Surname} {x.Id}",
+            $"{y.Name} {y.Surname} {y.Id}");
+            throw new NotImplementedException();
         }
 
         public int GetHashCode(Student obj)

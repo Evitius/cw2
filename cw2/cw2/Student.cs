@@ -6,7 +6,7 @@ namespace cw2
 {
     class Student
     {
-        public string Name {get; set; }
+        public string Name { get; set; }
         public string Surname { get; set; }
         public string Studies { get; set; }
         public string Course { get; set; }
@@ -17,7 +17,7 @@ namespace cw2
         public string Father { get; set; }
 
 
-        public Student(string [] line)
+        public Student(string[] line)
         {
             Name = line[0].ToString();
             Surname = line[1].ToString();
