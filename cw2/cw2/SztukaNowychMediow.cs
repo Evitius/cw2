@@ -9,6 +9,7 @@ namespace cw2
     {
         [XmlAttribute]
         public string Name = "New Art Media";
+        [XmlAttribute] 
         public int NumberOfStudents { get; set; }
     }
 }

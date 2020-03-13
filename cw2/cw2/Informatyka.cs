@@ -9,6 +9,8 @@ namespace cw2
     {
         [XmlAttribute]
         public string Name = "Computer Science";
+       
+        [XmlAttribute]
         public int NumberOfStudents { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace cw2
 		[XmlAttribute]
 		public DateTime CreatedAt { get; set;}
 
-		[XmlAttribute]
+		[XmlAttribute] 
 		public string Author { get; set; }
 		
 		public HashSet<Student> Studenci { get; set;}

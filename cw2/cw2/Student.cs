@@ -15,7 +15,7 @@ namespace cw2
         public string Name { get; set; }
         
         [XmlElement(elementName: "lname")]
-        public string Surname { get; set; }
+        public string Surname { get; set; } 
 
         [XmlElement(elementName: "birthdate")]
         public string Date { get; set; }

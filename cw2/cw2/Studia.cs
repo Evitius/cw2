@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 namespace cw2
 {
     public class Studia
-    {
+    { 
         [XmlElement(elementName: "name")]
         public string Name { get; set; }
 

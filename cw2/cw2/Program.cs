@@ -9,10 +9,9 @@ namespace cw2
     {
         static void Main(string[] args)
         {
+            string path = args[0];
+            string destinationPath = args[1];
 
-
-            var path = @"C:\Users\Michał\Desktop\dane.csv";
-            var destinationPath = @"C:\Users\Michał\Desktop\wynik.xml";
 
             try
             {
@@ -20,8 +19,8 @@ namespace cw2
 
                 var liness = File.ReadLines(path);
                 var hash = new HashSet<cw2.Student>(new cw2.OwnComparer());
-                //int computerScienceStudents;
-                //int mediaArtStudents;
+                int computerScienceStudents=0;
+                int mediaArtStudents=0;
 
                 foreach (var line in liness)
                 {
@@ -52,6 +51,13 @@ namespace cw2
                 }
 
 
+                foreach (var student in hash)
+                {
+                    if (student.Studies.Name == "Sztuka Nowych Mediów dzienne" ) mediaArtStudents++;
+                    else computerScienceStudents++;
+                }
+
+
                 Uczelnia uczelnia = new Uczelnia
                 {
                     CreatedAt = DateTime.Today,
@@ -59,7 +65,17 @@ namespace cw2
                     Studenci = hash,
                     ActiveStudies = new AktywneStudia
                     {
+                        ComputerScience = new Informatyka
+                        {
+                            Name = "Informatyka dzienne",
+                            NumberOfStudents = computerScienceStudents
+                        },
 
+                       NewArtMedia= new SztukaNowychMediow
+                       {
+                           Name = "Sztuka Nowych Mediów dzienne",
+                           NumberOfStudents = mediaArtStudents
+                        }
                     }
                 };
 
