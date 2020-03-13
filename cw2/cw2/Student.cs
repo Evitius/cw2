@@ -1,33 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace cw2
 {
-    class Student
+    public class Student
     {
+        [XmlElement(elementName: "fname")]
         public string Name { get; set; }
+        
+        [XmlElement(elementName: "lname")]
         public string Surname { get; set; }
+
+        [XmlElement(elementName: "studies")]
         public string Studies { get; set; }
         public string Course { get; set; }
+
+        [XmlAttribute(attributeName: "indexNumber")]
         public string Id { get; set; }
+
+        [XmlElement(elementName: "birthdate")]
         public string Date { get; set; }
+
+        [XmlElement(elementName: "email")]
         public string Email { get; set; }
+
+        [XmlElement(elementName: "mothersName")]
         public string Mother { get; set; }
+
+        [XmlElement(elementName: "fathersName")]
         public string Father { get; set; }
-
-
-        public Student(string[] line)
-        {
-            Name = line[0].ToString();
-            Surname = line[1].ToString();
-            Studies = line[2].ToString();
-            Course = line[3].ToString();
-            Id = line[4].ToString();
-            Date = line[5].ToString();
-            Email = line[6].ToString();
-            Mother = line[7].ToString();
-            Father = line[8].ToString();
-        }
     }
 }

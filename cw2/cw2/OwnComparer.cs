@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace cw2
 {
-    class OwnComparer : IEqualityComparer<Student>
+    public class OwnComparer : IEqualityComparer<Student>
 
     {
         public bool Equals(Student x, Student y)
