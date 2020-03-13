@@ -7,13 +7,14 @@ namespace cw2
 	[Serializable]
 	public class Uczelnia
 	{
-		[XmlAttribute(AttributeName = "createdAt")]
+		[XmlAttribute]
 		public DateTime CreatedAt { get; set;}
 
-		[XmlAttribute(AttributeName = "author")]
+		[XmlAttribute]
 		public string Author { get; set; }
-
-		[XmlElement(elementName: "studenci")]
+		
 		public HashSet<Student> Studenci { get; set;}
-		}
+
+		public AktywneStudia ActiveStudies { get; set; }
+	}
 }

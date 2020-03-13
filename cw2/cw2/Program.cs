@@ -20,8 +20,8 @@ namespace cw2
 
                 var liness = File.ReadLines(path);
                 var hash = new HashSet<cw2.Student>(new cw2.OwnComparer());
-                //ICollection<string> list = new List<string>();
-
+                //int computerScienceStudents;
+                //int mediaArtStudents;
 
                 foreach (var line in liness)
                 {
@@ -44,8 +44,8 @@ namespace cw2
                         Father = splitLine[8],
                         Studies = new Studia
                         {
-                            Name = splitLine[3],
-                            Mode = splitLine[4]
+                            Name = splitLine[2],
+                            Mode = splitLine[3]
                         }
                     };
                     hash.Add(student);
@@ -56,7 +56,11 @@ namespace cw2
                 {
                     CreatedAt = DateTime.Today,
                     Author = "Michał Żabicki",
-                    Studenci = hash
+                    Studenci = hash,
+                    ActiveStudies = new AktywneStudia
+                    {
+
+                    }
                 };
 
 
@@ -64,7 +68,7 @@ namespace cw2
                 XmlSerializer xmls = new XmlSerializer(typeof(Uczelnia));
                 FileStream fsWrite = new FileStream(destinationPath, FileMode.Create);
                 xmls.Serialize(fsWrite,uczelnia);
-
+                
 
             }
             catch (ArgumentException e)
