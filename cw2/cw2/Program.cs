@@ -25,7 +25,7 @@ namespace cw2
 
                 foreach (var line in liness)
                 {
-                    var splitLine = line.Split(",");
+                    string[] splitLine = line.Split(",");
 
                     if (splitLine.Length < 9)
                     {
@@ -35,15 +35,15 @@ namespace cw2
 
                     cw2.Student student = new cw2.Student
                     {
-                        Name = line[0].ToString(),
-                        Surname = line[1].ToString(),
-                        Studies = line[2].ToString(),
-                        Course = line[3].ToString(),
-                        Id = line[4].ToString(),
-                        Date = line[5].ToString(),
-                        Email = line[6].ToString(),
-                        Mother = line[7].ToString(),
-                        Father = line[8].ToString(),
+                        Name = splitLine[0],
+                        Surname = splitLine[1],
+                        Studies = splitLine[2],
+                        Course = splitLine[3],
+                        Id = splitLine[4],
+                        Date = splitLine[5],
+                        Email = splitLine[6],
+                        Mother = splitLine[7],
+                        Father = splitLine[8],
                     };
                     hash.Add(student);
                 }

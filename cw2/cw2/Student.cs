@@ -7,18 +7,15 @@ namespace cw2
 {
     public class Student
     {
+
+        [XmlAttribute(attributeName: "indexNumber")]
+        public string Id { get; set; }
+
         [XmlElement(elementName: "fname")]
         public string Name { get; set; }
         
         [XmlElement(elementName: "lname")]
         public string Surname { get; set; }
-
-        [XmlElement(elementName: "studies")]
-        public string Studies { get; set; }
-        public string Course { get; set; }
-
-        [XmlAttribute(attributeName: "indexNumber")]
-        public string Id { get; set; }
 
         [XmlElement(elementName: "birthdate")]
         public string Date { get; set; }
@@ -31,5 +28,15 @@ namespace cw2
 
         [XmlElement(elementName: "fathersName")]
         public string Father { get; set; }
+
+        //[XmlAttribute(AttributeName = "studies")]
+        
+        [XmlElement(elementName: "name")]
+        public string Studies { get; set; }
+
+        [XmlElement(elementName: "mode")]
+        public string Course { get; set; }
+
+
     }
 }
